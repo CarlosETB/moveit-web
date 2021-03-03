@@ -31,7 +31,7 @@
 
 ## Sobre o Projeto
 
-Projeto realizado durante a Next Level Week - IV
+O **move.it** é um app que une a técnica de **Pomodoro** com a realização de exercícios físicos para quem passa muito tempo na frente do computador.
 
 <br />
 
