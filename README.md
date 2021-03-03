@@ -2,7 +2,7 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/CarlosETB/moveit-web.svg)](https://github.com/CarlosETB/moveit-web/issues)
+[![GitHub issues](https://img.shields.io/github/issues-raw/CarlosETB/moveit-web.svg?style=flat-square)](https://github.com/CarlosETB/moveit-web/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/CarlosETB/moveit-web.svg)](https://github.com/CarlosETB/moveit-web/commits/master)
 ![GitHub language count](https://img.shields.io/github/languages/count/CarlosETB/moveit-web?color=%2304D361)
 ![GitHub repository size](https://img.shields.io/github/repo-size/CarlosETB/moveit-web)
