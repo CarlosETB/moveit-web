@@ -3,11 +3,11 @@
 <!-- PROJECT SHIELDS -->
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/CarlosETB/moveit-web.svg?style=flat-square)](https://github.com/CarlosETB/moveit-web/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/CarlosETB/moveit-web.svg?style=for-the-badge)](https://github.com/CarlosETB/moveit-web/commits/master)
-![GitHub language count](https://img.shields.io/github/languages/count/CarlosETB/moveit-web?color=%2304D361)
-![GitHub repository size](https://img.shields.io/github/repo-size/CarlosETB/moveit-web)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/CarlosETB/moveit-web/stargazers)
-[![Made by Rocketseat](https://img.shields.io/badge/made%20by-Rocketseat-%238257e6)](https://rocketseat.com.br/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/CarlosETB/moveit-web.svg?style=flat-square)](https://github.com/CarlosETB/moveit-web/commits/master)
+![GitHub language count](https://img.shields.io/github/languages/count/CarlosETB/moveit-web?color=%2304D361?style=flat-square)
+![GitHub repository size](https://img.shields.io/github/repo-size/CarlosETB/moveit-web?style=flat-square)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square)](https://github.com/CarlosETB/moveit-web/stargazers)
+[![Made by Rocketseat](https://img.shields.io/badge/made%20by-Rocketseat-%238257e6?style=flat-square)](https://rocketseat.com.br/)
 
 <!-- PROJECT LOGO -->
 
