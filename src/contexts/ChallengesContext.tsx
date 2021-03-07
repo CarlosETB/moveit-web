@@ -1,9 +1,14 @@
 import React, { createContext, ReactNode, useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 import challenges from "../../challenges.json";
+import LevelUpModal from "components/LevelUpModal";
 
 interface ChallengesProviderProps {
   children: ReactNode;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
 }
 
 interface ChallengeProps {
@@ -22,17 +27,23 @@ interface ChallengesContextProps {
   resetChallenge: () => void;
   statNewChallenge: () => void;
   completedChallenge: () => void;
+  closeLevelUpModal: () => void;
 }
 
 const ChallengesContext = createContext({} as ChallengesContextProps);
 
 const ChallengesProvider: React.FC<ChallengesProviderProps> = (props) => {
-  const { children } = props;
+  const { children, ...rest } = props;
 
-  const [level, setLevel] = useState(1);
-  const [currentExperience, setCurrentExperience] = useState(0);
-  const [challengesCompleted, setChallengesCompleted] = useState(0);
+  const [level, setLevel] = useState(rest.level ?? 1);
+  const [currentExperience, setCurrentExperience] = useState(
+    rest.currentExperience ?? 0
+  );
+  const [challengesCompleted, setChallengesCompleted] = useState(
+    rest.challengesCompleted ?? 0
+  );
   const [activeChallenge, setActiveChallenge] = useState(null);
+  const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
@@ -40,8 +51,19 @@ const ChallengesProvider: React.FC<ChallengesProviderProps> = (props) => {
     Notification.requestPermission();
   }, []);
 
+  useEffect(() => {
+    Cookies.set("level", String(level));
+    Cookies.set("currentExperience", String(currentExperience));
+    Cookies.set("challengesCompleted", String(challengesCompleted));
+  }, [level, currentExperience, challengesCompleted]);
+
   const levelUp = () => {
     setLevel(level + 1);
+    setIsLevelUpModalOpen(true);
+  };
+
+  const closeLevelUpModal = () => {
+    setIsLevelUpModalOpen(false);
   };
 
   const statNewChallenge = () => {
@@ -94,9 +116,11 @@ const ChallengesProvider: React.FC<ChallengesProviderProps> = (props) => {
         resetChallenge,
         statNewChallenge,
         completedChallenge,
+        closeLevelUpModal,
       }}
     >
       {children}
+      {isLevelUpModalOpen && <LevelUpModal />}
     </ChallengesContext.Provider>
   );
 };
